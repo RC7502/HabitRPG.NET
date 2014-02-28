@@ -1,0 +1,9 @@
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\bin\Debug\HabitRPG.NET.dll
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\bin\Debug\HabitRPG.NET.pdb
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\bin\Debug\Newtonsoft.Json.dll
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\bin\Debug\RestSharp.dll
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\bin\Debug\RestSharp.xml
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\obj\Debug\HabitRPG.NET.csprojResolveAssemblyReference.cache
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\obj\Debug\HabitRPG.NET.dll
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\obj\Debug\HabitRPG.NET.pdb
