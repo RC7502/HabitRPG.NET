@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\BitsmackGTAPI\packages\HabitRPG.NET\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="HabitRPGClient.cs" />
     <Compile Include="Models\Checklist.cs" />
+    <Compile Include="Models\ExportHistory.cs" />
     <Compile Include="Models\History.cs" />
     <Compile Include="Models\Repeat.cs" />
     <Compile Include="Models\Tag.cs" />

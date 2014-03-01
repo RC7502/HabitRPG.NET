@@ -13,6 +13,6 @@ namespace HabitRPG.NET.Models
         public double Value { get; set; }
 
         [JsonProperty("date")]
-        public object Date { get; set; }
+        public long Date { get; set; }
     }
 }
