@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -43,13 +44,20 @@ namespace HabitRPG.NET
             request.AddHeader("x-api-user", _apiUser);
 
             var response = _restClient.Execute(request);
+
+            //this is messy, eventually switch to a CSV parser
             var rows = response.Content.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
             var list = new List<ExportHistory>();
             foreach (var row in rows)
             {             
-                var fields = Regex.Split(row, ",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+                var split = Regex.Split(row, ",(?=(?:[^\"]*\"[^\"]*\")*(?![^\"]*\"))");
+                var fields = new List<string>();
+                foreach (var item  in split)
+                {
+                    fields.Add(item.Replace("\"",""));
+                }
                 DateTime histDate;
-                if (DateTime.TryParse(fields[3].Remove(), out histDate))
+                if (fields.Count == 5 && DateTime.TryParse(fields[3], out histDate))
                 {
                     var history = new ExportHistory()
                         {

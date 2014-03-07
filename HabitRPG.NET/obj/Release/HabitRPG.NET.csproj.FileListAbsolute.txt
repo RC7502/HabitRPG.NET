@@ -1,0 +1,5 @@
+C:\Users\xbl_000\Documents\GitHub\BitsmackGTAPI\packages\HabitRPG.NET\HabitRPG.NET.dll
+C:\Users\xbl_000\Documents\GitHub\BitsmackGTAPI\packages\HabitRPG.NET\HabitRPG.NET.pdb
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\obj\Release\HabitRPG.NET.dll
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\obj\Release\HabitRPG.NET.pdb
+C:\Users\xbl_000\Documents\GitHub\HabitRPG.NET\HabitRPG.NET\obj\Release\HabitRPG.NET.csprojResolveAssemblyReference.cache
