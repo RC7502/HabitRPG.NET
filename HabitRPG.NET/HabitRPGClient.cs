@@ -4,8 +4,10 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Web.Script.Serialization;
 using HabitRPG.NET.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using RestSharp;
 
 namespace HabitRPG.NET
@@ -35,6 +37,33 @@ namespace HabitRPG.NET
             var taskList = JsonConvert.DeserializeObject<List<Task>>(response.Content);
 
             return taskList;
+        }
+
+        public void AddTask(Task newTask)
+        {
+            try
+            {
+                var addedTask = new AddedTask
+                    {
+                        Type = newTask.Type,
+                        Text = newTask.Text,
+                        Date = newTask.Date
+                    };
+
+                var request = new RestRequest("/user/tasks", Method.POST);
+                request.AddHeader("x-api-key", _apiToken);
+                request.AddHeader("x-api-user", _apiUser);
+                //var jsonObj = JsonConvert.SerializeObject(addedTask);            
+                request.RequestFormat = DataFormat.Json;
+                request.AddBody(addedTask);
+
+                var response = _restClient.Execute(request);
+                var error = response.ErrorMessage;
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+            }
         }
 
         public List<ExportHistory> GetExportHistory()

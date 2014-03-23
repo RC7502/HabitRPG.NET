@@ -32,7 +32,7 @@ namespace HabitRPG.NET.Models
         public DateTime DateCreated { get; set; }
 
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public Guid Id { get; set; }
 
         [JsonProperty("down")]
         public bool Down { get; set; }
