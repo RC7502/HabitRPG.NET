@@ -45,9 +45,9 @@ namespace HabitRPG.NET
             {
                 var addedTask = new AddedTask
                     {
-                        Type = newTask.Type,
-                        Text = newTask.Text,
-                        Date = newTask.Date
+                        type = newTask.Type,
+                        text = newTask.Text,
+                        date = newTask.Date
                     };
 
                 var request = new RestRequest("/user/tasks", Method.POST);
@@ -56,6 +56,25 @@ namespace HabitRPG.NET
                 //var jsonObj = JsonConvert.SerializeObject(addedTask);            
                 request.RequestFormat = DataFormat.Json;
                 request.AddBody(addedTask);
+
+                var response = _restClient.Execute(request);
+                var error = response.ErrorMessage;
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+            }
+        }
+
+        public void ScoreTask(Guid id, string direction)
+        {
+            try
+            {
+                var path = string.Format("/user/tasks/{0}/{1}", id, direction);
+
+                var request = new RestRequest(path, Method.POST);
+                request.AddHeader("x-api-key", _apiToken);
+                request.AddHeader("x-api-user", _apiUser);
 
                 var response = _restClient.Execute(request);
                 var error = response.ErrorMessage;

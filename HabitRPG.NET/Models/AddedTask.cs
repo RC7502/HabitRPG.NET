@@ -9,10 +9,10 @@ namespace HabitRPG.NET.Models
     public class AddedTask
     {
         [JsonProperty("text")]
-        public string Text { get; set; }
+        public string text { get; set; }
         [JsonProperty("type")]
-        public string Type { get; set; }
+        public string type { get; set; }
         [JsonProperty("date")]
-        public string Date { get; set; }
+        public string date { get; set; }
     }
 }
